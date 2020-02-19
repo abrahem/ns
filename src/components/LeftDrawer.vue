@@ -5,6 +5,7 @@
     content-class="bg-grey-2"
   >
     <q-list>
+  <q-btn outline label="One" @click="this.$q.loadingBar.start()" />
       <q-item to="/" exact>
         <q-item-section>
           <q-item-label>الرئيسية</q-item-label>

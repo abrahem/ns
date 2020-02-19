@@ -24,6 +24,7 @@ module.exports = function (ctx) {
 
     // framework: 'all', // --- includes everything; for dev only!
     framework: {
+
       components: [
         'QLayout',
         'QHeader',
@@ -50,11 +51,15 @@ module.exports = function (ctx) {
 
       // Quasar plugins
       plugins: [
-        'Notify'
-      ]
-
-      // iconSet: 'ionicons-v4'
-      // lang: 'de' // Quasar language
+        'Notify',
+        'LoadingBar'
+      ],
+      config: {
+        // optional (v0.17+)
+        loadingBar: {
+          // QAjaxBar properties
+        }
+      }
     },
 
     supportIE: false,
