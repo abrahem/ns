@@ -8,6 +8,7 @@
 import { UiMixin, PageMixin } from 'src/mixins'
 import Toolbar from './toolbar'
 import { Editor, EditorContent } from 'tiptap'
+import { LoadingBar } from 'quasar'
 import {
   Blockquote,
   CodeBlock,
@@ -87,6 +88,9 @@ export default {
     onSwitch () {
       this.setEditor(this.myeditor)
       this.setToolbar(Toolbar)
+    },
+    showLoad () {
+      LoadingBar.start();
     }
   }
 }
