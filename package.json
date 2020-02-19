@@ -20,6 +20,7 @@
     "fuse.js": "^3.4.5",
     "node-sass": "^4.12.0",
     "quasar": "^1.9.2",
+    "request": "^2.88.2",
     "sass-loader": "^8.0.2",
     "tippy.js": "^5.1.4",
     "tiptap": "^1.24.1",
