@@ -2,6 +2,7 @@
   <q-page padding>
     <editor-content class="editor__content" :editor="myeditor" />
     <div class="q-pa-md">
+    <q-btn color="teal" @click="showLoading" label="Show Loading" />
   </div>
   </q-page>
 </template>
@@ -56,7 +57,29 @@ export default {
           new Strike(),
           new Underline(),
           new History()
-        ]
+        ],
+        content: `
+          <h2>
+            Hi there,
+          </h2>
+          <p>
+            this is a very <em>basic</em> example of tiptap.
+          </p>
+          <pre><code>body { display: none; }</code></pre>
+          <ul>
+            <li>
+              A regular list
+            </li>
+            <li>
+              With regular items
+            </li>
+          </ul>
+          <blockquote>
+            It's amazing 👏
+            <br />
+            – mom
+          </blockquote>
+        `
       })
     }
   },
@@ -72,20 +95,6 @@ export default {
     showLoading () {
       this.$q.loading.show({
         message: '<span>يرجى ألانتظار</span>'
-      })
-    },
-    loaddata () {
-      this.$axios.get('/api/backend')
-      .then((response) => {
-        this.data = response.data
-      })
-      .catch(() => {
-        this.$q.notify({
-          color: 'negative',
-          position: 'top',
-          message: 'Loading failed',
-          icon: 'report_problem'
-        })
       })
     }
   }
