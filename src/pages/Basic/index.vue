@@ -2,7 +2,7 @@
   <q-page padding>
     <editor-content class="editor__content" :editor="myeditor" />
     <q-btn
-      @click="$q.notify('My message')"
+      @click="$q.loadingBar.start()"
       color="primary"
       label="Show a notification"
     />
