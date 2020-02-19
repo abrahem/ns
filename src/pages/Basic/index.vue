@@ -2,6 +2,7 @@
   <q-page padding>
     <editor-content class="editor__content" :editor="myeditor" />
     <div class="q-pa-md">
+    <q-btn color="teal" @click="showLoading" label="Show Loading" />
   </div>
   </q-page>
 </template>
@@ -10,7 +11,6 @@
 import { UiMixin, PageMixin } from 'src/mixins'
 import Toolbar from './toolbar'
 import { Editor, EditorContent } from 'tiptap'
-
 import {
   Blockquote,
   CodeBlock,
@@ -96,7 +96,6 @@ export default {
       this.$q.loading.show({
         message: '<span>يرجى ألانتظار</span>'
       })
-      
     }
   }
 }
