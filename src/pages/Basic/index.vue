@@ -96,6 +96,14 @@ export default {
       this.$q.loading.show({
         message: '<span>يرجى ألانتظار</span>'
       })
+      this.$axios.get('https://snoanime.com/ns/api/new/')
+      .then((response) => {
+        this.data = response.data
+        this.$q.loading.hide()
+      })
+      .catch(() => {
+        
+      })
     }
   }
 }
