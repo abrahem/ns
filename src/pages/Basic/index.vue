@@ -93,17 +93,8 @@ export default {
       this.setToolbar(Toolbar)
     },
     showLoading () {
-      this.$axios.get('https://snoanime.com/ns/api/new/')
-      .then((response) => {
-        this.data = response.data
-      })
-      .catch(() => {
-        this.$q.notify({
-          color: 'negative',
-          position: 'top',
-          message: 'Loading failed',
-          icon: 'report_problem'
-        })
+      this.$q.loading.show({
+        message: '<span>يرجى ألانتظار</span>'
       })
     }
   }
