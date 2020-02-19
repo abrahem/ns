@@ -10,7 +10,9 @@
 <script>
 import { UiMixin, PageMixin } from 'src/mixins'
 import Toolbar from './toolbar'
-import axios from 'src/boot/axios.js'
+import Vue from 'vue'
+import axios from 'axios'
+Vue.prototype.$axios = axios
 import { Editor, EditorContent } from 'tiptap'
 import {
   Blockquote,
