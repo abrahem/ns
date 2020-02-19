@@ -11,6 +11,7 @@
 import { UiMixin, PageMixin } from 'src/mixins'
 import Toolbar from './toolbar'
 import { Editor, EditorContent } from 'tiptap'
+import { axiosInstance } from 'src/boot/axios'
 import {
   Blockquote,
   CodeBlock,
@@ -93,7 +94,10 @@ export default {
       this.setToolbar(Toolbar)
     },
     showLoading () {
-      this.$q.dark.toggle()
+      this.$q.loading.show({
+        message: '<span>يرجى ألانتظار</span>'
+      })
+      axiosInstance.get('/')   
     }
   }
 }
