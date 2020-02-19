@@ -93,8 +93,22 @@ export default {
       this.setToolbar(Toolbar)
     },
     showLoading () {
-      this.$q.loading.show({
-        message: '<span>يرجى ألانتظار</span>'
+    this.$axios.get('/api/backend')
+      .then((response) => {
+        this.data = response.data
+        this.$q.notify({
+          color: 'negative',
+          position: 'top',
+          message: 'Done'
+         })
+      })
+      .catch(() => {
+        this.$q.notify({
+          color: 'negative',
+          position: 'top',
+          message: 'Loading failed',
+          icon: 'report_problem'
+        })
       })
     }
   }
