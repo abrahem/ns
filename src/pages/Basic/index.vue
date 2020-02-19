@@ -92,9 +92,6 @@ export default {
     onSwitch () {
       this.setEditor(this.myeditor)
       this.setToolbar(Toolbar)
-    },
-    loads (s) {
-      this.$q.loadingBar.start(s);
     }
   }
 }
