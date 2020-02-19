@@ -96,6 +96,28 @@ export default {
       this.$q.loading.show({
         message: '<span>يرجى ألانتظار</span>'
       })
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+      this.$q.loading.hide();
+      this.$q.notify({
+        message: 'تم التحميل بنجاح',
+        color: 'primary',
+        avatar: 'https://cdn.quasar.dev/img/boy-avatar.png'
+      })
+      } else {
+        this.$q.notify({
+        message: 'خطاء في الشبكة',
+        color: 'negative',
+        icon: 'report_problem',
+        actions: [
+          { label: 'حاول مجددا', color: 'white', handler: () => { /* ... */ } }
+        ]
+      })
+      }  
+      };
+      xhttp.open("GET", "https://snoanime.com/ns/api/new/", true);
+      xhttp.send();
     }
   }
 }
