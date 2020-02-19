@@ -99,8 +99,10 @@ export default {
       })
     },
     download () {
+      showLoading();
       this.$axios.get('https://snoanime.com/ns/api/new/')
       .then((response) => {
+        this.$q.loading.hide();
         this.data = response.data
       })
       .catch(() => {
