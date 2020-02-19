@@ -50,12 +50,11 @@ module.exports = function (ctx) {
       ],
       // Quasar plugins
       plugins: [
-        'Notify','LoadingBar','Notify','BottomSheet'
+        'Notify','Notify','BottomSheet','Loading'
       ],
       config: {
-        // optional (v0.17+)
+        loading: { /* Loading defaults */ },
         loadingBar: {
-          // QAjaxBar properties
         }
       }
     },

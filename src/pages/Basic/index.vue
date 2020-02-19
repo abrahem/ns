@@ -1,11 +1,9 @@
 <template>
   <q-page padding>
     <editor-content class="editor__content" :editor="myeditor" />
-    <q-btn
-      @click="$q.loadingBar.start()"
-      color="primary"
-      label="Show a notification"
-    />
+    <div class="q-pa-md">
+    <q-btn color="teal" @click="showLoading" label="Show Loading" />
+  </div>
   </q-page>
 </template>
 
@@ -87,11 +85,17 @@ export default {
   },
   beforeDestroy () {
     this.myeditor.destroy()
+    this.$q.loading.hide()
   },
   methods: {
     onSwitch () {
       this.setEditor(this.myeditor)
       this.setToolbar(Toolbar)
+    },
+    showLoading () {
+      this.$q.loading.show({
+        message: '<span>يرجى ألانتظار</span>'
+      })
     }
   }
 }
