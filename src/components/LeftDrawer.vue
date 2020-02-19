@@ -47,6 +47,8 @@
 
 <script>
 import UiMixin from 'src/mixins/ui'
+import { LoadingBar } from 'quasar'
+LoadingBar.start();
 export default {
   name: 'LeftDrawer',
   mixins: [UiMixin],
