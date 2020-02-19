@@ -24,7 +24,20 @@ module.exports = function (ctx) {
 
     // framework: 'all', // --- includes everything; for dev only!
     framework: {
-
+      config: {
+        brand: {
+          primary: '#673ab7',
+          secondary: '#512da8',
+          accent: '#512da8',
+  
+          dark: '#000000',
+  
+          positive: '#21BA45',
+          negative: '#C10015',
+          info: '#31CCEC',
+          warning: '#F2C037'
+        }
+      },
       components: [
         'QLayout',
         'QHeader',
@@ -101,7 +114,7 @@ module.exports = function (ctx) {
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
-        theme_color: '#222222',
+        theme_color: '#673ab7',
         icons: [
           {
             'src': 'statics/icons/icon-128x128.png',
