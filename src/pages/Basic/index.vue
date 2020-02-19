@@ -2,7 +2,6 @@
   <q-page padding>
     <editor-content class="editor__content" :editor="myeditor" />
     <div class="q-pa-md">
-    <q-btn color="teal" @click="download" label="Show Loading" />
   </div>
   </q-page>
 </template>
@@ -10,9 +9,6 @@
 <script>
 import { UiMixin, PageMixin } from 'src/mixins'
 import Toolbar from './toolbar'
-import Vue from 'vue'
-import axios from 'axios'
-Vue.prototype.$axios = axios
 import { Editor, EditorContent } from 'tiptap'
 import {
   Blockquote,
@@ -98,22 +94,6 @@ export default {
     showLoading () {
       this.$q.loading.show({
         message: '<span>يرجى ألانتظار</span>'
-      })
-    },
-    download () {
-      showLoading();
-      this.$axios.get('https://snoanime.com/ns/api/new/')
-      .then((response) => {
-        this.$q.loading.hide();
-        this.data = response.data
-      })
-      .catch(() => {
-        this.$q.notify({
-          color: 'negative',
-          position: 'top',
-          message: 'Loading failed',
-          icon: 'report_problem'
-        })
       })
     }
   }
