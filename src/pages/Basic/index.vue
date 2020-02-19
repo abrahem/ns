@@ -97,7 +97,6 @@ export default {
       this.$q.loading.show({
         message: '<span>يرجى ألانتظار</span>'
       })
-      axiosInstance.get('/')   
     }
   }
 }
