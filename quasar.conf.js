@@ -48,11 +48,9 @@ module.exports = function (ctx) {
       directives: [
         'Ripple'
       ],
-
       // Quasar plugins
       plugins: [
-        'Notify',
-        'LoadingBar'
+        'Notify','LoadingBar','Notify','BottomSheet'
       ],
       config: {
         // optional (v0.17+)

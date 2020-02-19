@@ -1,6 +1,11 @@
 <template>
   <q-page padding>
     <editor-content class="editor__content" :editor="myeditor" />
+    <q-btn
+      @click="$q.notify('My message')"
+      color="primary"
+      label="Show a notification"
+    />
   </q-page>
 </template>
 
