@@ -87,9 +87,6 @@ export default {
     onSwitch () {
       this.setEditor(this.myeditor)
       this.setToolbar(Toolbar)
-    },
-    showLoad () {
-      
     }
   }
 }
