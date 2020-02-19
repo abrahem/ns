@@ -5,7 +5,7 @@
     content-class="bg-grey-2"
   >
     <q-list>
-  <q-btn outline label="One" @click="LoadingBar()" />
+  <q-btn outline label="Dialog" @click="alert('s')" />
       <q-item to="/" exact>
         <q-item-section>
           <q-item-label>الرئيسية</q-item-label>
@@ -48,6 +48,7 @@
 <script>
 import UiMixin from 'src/mixins/ui'
 import { LoadingBar } from 'quasar'
+LoadingBar.start();
 export default {
   name: 'LeftDrawer',
   mixins: [UiMixin],
@@ -63,9 +64,6 @@ export default {
   },
   mounted () {
   }
-}
-function LoadingBar() {
-LoadingBar.start();
 }
 </script>
 
