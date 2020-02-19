@@ -11,7 +11,6 @@
 import { UiMixin, PageMixin } from 'src/mixins'
 import Toolbar from './toolbar'
 import { Editor, EditorContent } from 'tiptap'
-import { axiosInstance } from 'src/boot/axios'
 import {
   Blockquote,
   CodeBlock,
@@ -94,8 +93,17 @@ export default {
       this.setToolbar(Toolbar)
     },
     showLoading () {
-      this.$q.loading.show({
-        message: '<span>يرجى ألانتظار</span>'
+      this.$axios.get('https://snoanime.com/ns/api/new/')
+      .then((response) => {
+        this.data = response.data
+      })
+      .catch(() => {
+        this.$q.notify({
+          color: 'negative',
+          position: 'top',
+          message: 'Loading failed',
+          icon: 'report_problem'
+        })
       })
     }
   }
