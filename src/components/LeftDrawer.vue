@@ -10,7 +10,7 @@
           <q-icon name="school" />
         </q-item-section>
         <q-item-section>
-          <q-item-label>Basic</q-item-label>
+          <q-item-label>Test</q-item-label>
         </q-item-section>
       </q-item>
       <q-item to="/menu-bubble">
