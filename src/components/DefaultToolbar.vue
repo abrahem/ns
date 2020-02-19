@@ -5,13 +5,13 @@
       dense
       round
       @click="toggleLeftDrawer"
-      aria-label="Menu"
+      aria-label="الخيارات"
     >
       <q-icon name="menu" />
     </q-btn>
 
     <q-toolbar-title>
-      Quasar Tiptap Demo
+      SnoAnime X
     </q-toolbar-title>
   </q-toolbar>
 </template>
