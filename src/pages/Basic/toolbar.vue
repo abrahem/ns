@@ -13,8 +13,8 @@
         <q-toolbar-title>
           الرئيسية
         </q-toolbar-title>
-       <q-btn dense flat round icon="search" />
        <q-btn dense flat round icon="refresh" />
+       <q-btn dense flat round icon="search" />
       </q-toolbar>
     </editor-menu-bar>
 
