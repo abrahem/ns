@@ -93,13 +93,7 @@ export default {
       this.setToolbar(Toolbar)
     },
     showLoading () {
-    this.$axios.get('/')
-      .then((response) => {
-        this.data = response.data
-      })
-      .catch(() => {
-       
-      })
+      alert('ss')
     }
   }
 }
