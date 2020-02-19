@@ -10,7 +10,6 @@
 import { UiMixin, PageMixin } from 'src/mixins'
 import Toolbar from './toolbar'
 import { Editor, EditorContent } from 'tiptap'
-import axios from 'axios'
 
 import {
   Blockquote,
