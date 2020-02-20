@@ -33,7 +33,7 @@ export default {
   components: {
     EditorContent
   },
-  data() {
+  data () {
     return {
       myeditor: new Editor({
         extensions: [
@@ -84,7 +84,7 @@ export default {
     this.myeditor.destroy()
   },
   methods: {
-    loadData() {
+    loadData () {
       this.$axios
         .get('/')
         .then(response => {
@@ -99,7 +99,7 @@ export default {
           })
         })
     },
-    onSwitch() {
+    onSwitch () {
       this.setEditor(this.myeditor)
       this.setToolbar(Toolbar)
     }
