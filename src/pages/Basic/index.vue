@@ -90,6 +90,7 @@ export default {
         .get('/')
         .then(response => {
           this.data = response.data
+          console.log(this.data)
         })
         .catch(() => {
           this.$q.notify({
