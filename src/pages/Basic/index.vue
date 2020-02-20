@@ -1,7 +1,116 @@
 <template>
   <q-page padding>
     <editor-content class='editor__content' :editor='myeditor' />
-    <q-btn color="primary" label="Primary" @click="loadData" />
+        <q-list bordered>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>List item</q-item-section>
+        <q-item-section thumbnail>
+          <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        </q-item-section>
+      </q-item>
+    </q-list>
   </q-page>
 </template>
 
@@ -96,7 +205,7 @@ export default {
           this.$q.notify({
             color: 'negative',
             position: 'top',
-            message: 'Loading failed',
+            message: 'توجد مشكلة في الشبكة حاول أعادة الفتح',
             icon: 'report_problem'
           })
         })
