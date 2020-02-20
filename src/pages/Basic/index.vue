@@ -164,8 +164,7 @@ export default {
           new Strike(),
           new Underline(),
           new History()
-        ],
-        content: ``
+        ]
       })
     }
   },
