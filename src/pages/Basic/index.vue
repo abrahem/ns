@@ -1,16 +1,15 @@
 <template>
   <q-page padding>
     <editor-content class="editor__content" :editor="myeditor" />
-    <div class="q-pa-md">
-  </div>
-      <q-btn color="primary" label="Primary" @click="loaddata" />
+    <div class="q-pa-md"></div>
+    <q-btn color="primary" label="Primary" @click="loaddata" />
   </q-page>
 </template>
 
 <script>
-import { UiMixin, PageMixin } from 'src/mixins'
-import Toolbar from './toolbar'
-import { Editor, EditorContent } from 'tiptap'
+import { UiMixin, PageMixin } from "src/mixins";
+import Toolbar from "./toolbar";
+import { Editor, EditorContent } from "tiptap";
 import {
   Blockquote,
   CodeBlock,
@@ -29,14 +28,14 @@ import {
   Strike,
   Underline,
   History
-} from 'tiptap-extensions'
+} from "tiptap-extensions";
 
 export default {
   mixins: [UiMixin, PageMixin],
   components: {
     EditorContent
   },
-  data () {
+  data() {
     return {
       myeditor: new Editor({
         extensions: [
@@ -81,31 +80,32 @@ export default {
           </blockquote>
         `
       })
-    }
+    };
   },
-  beforeDestroy () {
-    this.myeditor.destroy()
-    this.$q.loading.hide()
+  beforeDestroy() {
+    this.myeditor.destroy();
+    this.$q.loading.hide();
   },
   methods: {
-    onSwitch () {
-      this.setEditor(this.myeditor)
-      this.setToolbar(Toolbar)
+    onSwitch() {
+      this.setEditor(this.myeditor);
+      this.setToolbar(Toolbar);
     },
-    loaddata () {
-      this.$axios.get('/api/backend')
-      .then((response) => {
-        this.data = response.data
+    loaddata() {
+      this.$axios
+        .get("/")
+        .then(response => {
+          this.data = response.data;
         })
         .catch(() => {
           this.$q.notify({
-          color: 'negative',
-          position: 'top',
-          message: 'Loading failed',
-          icon: 'report_problem'
-        })
-      })
+            color: "negative",
+            position: "top",
+            message: "Loading failed",
+            icon: "report_problem"
+          });
+        });
     }
   }
-}
+};
 </script>
