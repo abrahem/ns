@@ -93,9 +93,9 @@ export default {
     },
     loaddata() {
       this.$axios
-        .get("/")
-        .then(response => {
-          this.data = response.data;
+      .get("/")
+      .then(response => {
+        this.data = response.data;
         })
         .catch(() => {
           this.$q.notify({
@@ -103,7 +103,7 @@ export default {
             position: "top",
             message: "Loading failed",
             icon: "report_problem"
-          });
+            });
         });
     }
   }
