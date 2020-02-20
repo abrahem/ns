@@ -84,6 +84,20 @@ export default {
     this.myeditor.destroy()
   },
   methods: {
+    loadData () {
+    this.$axios.get('/')
+      .then((response) => {
+        this.data = response.data
+      })
+      .catch(() => {
+        this.$q.notify({
+          color: 'negative',
+          position: 'top',
+          message: 'Loading failed',
+          icon: 'report_problem'
+        })
+      })
+  },
     onSwitch () {
       this.setEditor(this.myeditor)
       this.setToolbar(Toolbar)
