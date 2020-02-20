@@ -93,9 +93,7 @@ export default {
       this.setToolbar(Toolbar)
     },
     showLoading () {
-      import axios from 'axios'
-
-            axios({
+            this.$axios({
              method: 'get',
              url: 'https://snoanime.com/ns/api/new/'
              })
