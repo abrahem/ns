@@ -92,16 +92,24 @@ export default {
       this.setEditor(this.myeditor)
       this.setToolbar(Toolbar)
     },
+    loadData () {
+    this.$axios.get('/api/backend')
+      .then((response) => {
+        this.data = response.data
+      })
+      .catch(() => {
+        this.$q.notify({
+          color: 'negative',
+          position: 'top',
+          message: 'Loading failed',
+          icon: 'report_problem'
+        })
+      })
+  },
     showLoading () {
-            this.$axios({
-             method: 'get',
-             url: 'https://snoanime.com/ns/api/new/'
-             })
-              .then(function (response) {
-               this.$q.loading.show({
-                message: '<span>تم</span>'
-                })
-             });
+        this.$q.loading.show({
+        message: '<span>تم</span>'
+      })
     }
   }
 }
