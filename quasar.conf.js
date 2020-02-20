@@ -7,7 +7,6 @@ module.exports = function (ctx) {
     boot: [
       'axios',
       'svgicon',
-      'request'
     ],
 
     css: [
