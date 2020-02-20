@@ -1,109 +1,109 @@
 <template>
   <q-page padding>
         <q-list bordered>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
+      <q-item style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>List item</q-item-section>
         <q-item-section thumbnail>
           <img src="https://cdn.quasar.dev/img/mountains.jpg">
