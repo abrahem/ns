@@ -2,7 +2,6 @@
   <q-page padding>
     <editor-content class="editor__content" :editor="myeditor" />
     <div class="q-pa-md">
-    <q-btn color="teal" @click="showLoading" label="Show Loading" />
   </div>
   </q-page>
 </template>
@@ -91,11 +90,6 @@ export default {
     onSwitch () {
       this.setEditor(this.myeditor)
       this.setToolbar(Toolbar)
-    },
-    showLoading () {
-      this.$q.loading.show({
-        message: '<span>يرجى  ألانتظار</span>'
-      })
     }
   }
 }
