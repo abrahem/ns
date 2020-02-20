@@ -94,7 +94,7 @@ export default {
     },
     showLoading () {
       this.$q.loading.show({
-        message: '<span>يرجى ألانتظار</span>'
+        message: '<span>يرجى  ألانتظار</span>'
       })
     }
   }
