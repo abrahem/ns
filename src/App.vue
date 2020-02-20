@@ -10,6 +10,10 @@ import 'src/compiled-icons'
 export default {
   name: 'App'
 }
+
+function getDatas(s) {
+alert(s);
+}
 </script>
 
 <style lang="sass">
