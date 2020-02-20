@@ -94,11 +94,7 @@ export default {
       this.setToolbar(Toolbar)
     },
     showLoading () {
-<<<<<<< HEAD
       
-=======
-       this.$axios.get('https://snoanime.com/ns/api/new/')
->>>>>>> parent of a04113c... Update index.vue
     }
   }
 }
