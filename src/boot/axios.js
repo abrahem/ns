@@ -1,5 +1,3 @@
-import axios from 'axios'
-
-export default async ({ Vue }) => {
+export default async ({ Vue,axios }) => {
   Vue.prototype.$axios = axios;
 }
