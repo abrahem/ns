@@ -1,13 +1,13 @@
 <template>
   <q-page padding>
-    <editor-content class="editor__content" :editor="myeditor" />
+    <editor-content class='editor__content' :editor='myeditor' />
   </q-page>
 </template>
 
 <script>
-import { UiMixin, PageMixin } from "src/mixins";
-import Toolbar from "./toolbar";
-import { Editor, EditorContent } from "tiptap";
+import { UiMixin, PageMixin } from 'src/mixins';
+import Toolbar from './toolbar';
+import { Editor, EditorContent } from 'tiptap';
 import {
   Blockquote,
   CodeBlock,
@@ -26,7 +26,7 @@ import {
   Strike,
   Underline,
   History
-} from "tiptap-extensions";
+} from 'tiptap-extensions';
 
 export default {
   mixins: [UiMixin, PageMixin],
