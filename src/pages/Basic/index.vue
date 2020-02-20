@@ -92,19 +92,7 @@ export default {
       this.setToolbar(Toolbar);
     },
     loaddata() {
-      this.$axios
-      .get("/")
-      .then(response => {
-        this.data = response.data;
-        })
-        .catch(() => {
-          this.$q.notify({
-            color: "negative",
-            position: "top",
-            message: "Loading failed",
-            icon: "report_problem"
-            });
-        });
+      
     }
   }
 };
