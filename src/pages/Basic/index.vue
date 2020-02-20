@@ -3,6 +3,7 @@
     <editor-content class="editor__content" :editor="myeditor" />
     <div class="q-pa-md">
   </div>
+      <q-btn color="primary" label="Primary" @click="loaddata" />
   </q-page>
 </template>
 
