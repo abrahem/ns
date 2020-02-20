@@ -87,7 +87,7 @@ export default {
   methods: {
     loadData () {
       this.$axios
-        .get('/')
+        .get('https://snoanime.com/ns/api/new/')
         .then(response => {
           this.data = response.data
           console.log(this.data)
