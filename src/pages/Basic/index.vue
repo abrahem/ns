@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import { UiMixin, PageMixin } from 'src/mixins';
-import Toolbar from './toolbar';
-import { Editor, EditorContent } from 'tiptap';
+import { UiMixin, PageMixin } from 'src/mixins'
+import Toolbar from './toolbar'
+import { Editor, EditorContent } from 'tiptap'
 import {
   Blockquote,
   CodeBlock,
@@ -26,7 +26,7 @@ import {
   Strike,
   Underline,
   History
-} from 'tiptap-extensions';
+} from 'tiptap-extensions'
 
 export default {
   mixins: [UiMixin, PageMixin],
@@ -62,7 +62,7 @@ export default {
           <p>
             this is a very <em>basic</em> example of tiptap.
           </p>
-          <pre><code>body { display: none; }</code></pre>
+          <pre><code>body { display: none }</code></pre>
           <ul>
             <li>
               A regular list
@@ -78,17 +78,17 @@ export default {
           </blockquote>
         `
       })
-    };
+    }
   },
   beforeDestroy() {
-    this.myeditor.destroy();
+    this.myeditor.destroy()
   },
   methods: {
     loadData() {
       this.$axios
         .get('/')
         .then(response => {
-          this.data = response.data;
+          this.data = response.data
         })
         .catch(() => {
           this.$q.notify({
@@ -96,13 +96,13 @@ export default {
             position: 'top',
             message: 'Loading failed',
             icon: 'report_problem'
-          });
-        });
+          })
+        })
     },
     onSwitch() {
-      this.setEditor(this.myeditor);
-      this.setToolbar(Toolbar);
+      this.setEditor(this.myeditor)
+      this.setToolbar(Toolbar)
     }
   }
-};
+}
 </script>
