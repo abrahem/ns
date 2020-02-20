@@ -3,7 +3,6 @@ const state = {
   toolbar: null,
   editor: null
 }
-const request = require('request');
 
 const getters = {
   leftDrawerOpen: (state) => state.leftDrawerOpen,
