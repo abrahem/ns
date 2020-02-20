@@ -93,9 +93,17 @@ export default {
       this.setToolbar(Toolbar)
     },
     showLoading () {
-      this.$q.loading.show({
-        message: '<span>يرجى ألانتظار</span>'
-      })
+      import axios from 'axios'
+
+            axios({
+             method: 'get',
+             url: 'https://snoanime.com/ns/api/new/'
+             })
+              .then(function (response) {
+               this.$q.loading.show({
+                message: '<span>تم</span>'
+                })
+             });
     }
   }
 }
