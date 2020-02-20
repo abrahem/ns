@@ -1,6 +1,7 @@
 <template>
   <q-page padding>
     <editor-content class='editor__content' :editor='myeditor' />
+    <q-btn color="primary" label="Primary" @click="loadData" />
   </q-page>
 </template>
 
