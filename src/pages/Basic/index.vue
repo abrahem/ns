@@ -85,7 +85,7 @@ export default {
   },
   methods: {
     loadData () {
-      this.$axios.get('/')
+        this.$axios.get('/')
       .then((response) => {
         this.data = response.data
         })
