@@ -93,7 +93,9 @@ export default {
       this.setToolbar(Toolbar)
     },
     showLoading () {
-      
+      this.$q.loading.show({
+        message: '<span>يرجى ألانتظار</span>'
+      })
     }
   }
 }
