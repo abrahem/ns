@@ -105,6 +105,9 @@ export default {
       this.setEditor(this.myeditor)
       this.setToolbar(Toolbar)
     }
+  },
+  created () {
+    this.loadData()
   }
 }
 </script>
