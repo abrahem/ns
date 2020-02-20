@@ -80,7 +80,7 @@ export default {
       })
     }
   },
-  beforeDestroy() {
+  beforeDestroy () {
     this.myeditor.destroy()
   },
   methods: {
