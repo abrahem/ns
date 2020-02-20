@@ -91,7 +91,7 @@ export default {
       this.setEditor(this.myeditor)
       this.setToolbar(Toolbar)
     },
-    loaddata() {
+    loaddata () {
       this.$axios.get()
     }
   }
