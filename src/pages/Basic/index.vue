@@ -8,7 +8,6 @@
 </template>
 
 <script>
-const request = require('request');
 import { UiMixin, PageMixin } from 'src/mixins'
 import Toolbar from './toolbar'
 import { Editor, EditorContent } from 'tiptap'
