@@ -5,6 +5,7 @@
         <q-item-section>
           <q-item-label>{{ item.name }}</q-item-label>
           <q-item-label caption>{{ item }}</q-item-label>
+          count++
         </q-item-section>
         <q-item-section style="margin-left: -11px !important; margin-right: 0px !important;" thumbnail>
           <img :src="getPic(count)" v-bind:alt="pic" style="height: 125px; width: 90px;">
@@ -35,9 +36,8 @@ export default {
     this.myeditor.destroy()
   },
   methods: {
-    getPic(index) {
+    getPic (index) {
       return this.items[index].image
-      this.count++
     },
     loadData () {
       this.$q.loading.show({
