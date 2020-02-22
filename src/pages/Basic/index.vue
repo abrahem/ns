@@ -4,11 +4,10 @@
       <q-item v-for="item in items" v-bind:key="item.id" style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section>
           <q-item-label>{{ item.name }}</q-item-label>
-          <q-item-label caption>{{ item }}</q-item-label>
-          count++
+          <q-item-label caption>{{ item.epName }}</q-item-label>
         </q-item-section>
         <q-item-section style="margin-left: -11px !important; margin-right: 0px !important;" thumbnail>
-          <img :src="getPic(count)" v-bind:alt="pic" style="height: 125px; width: 90px;">
+          <img v-bind:src="item.image" v-bind:alt="pic" style="height: 125px; width: 90px;">
         </q-item-section>
       </q-item>
     </q-list>
