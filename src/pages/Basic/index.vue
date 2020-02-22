@@ -7,7 +7,7 @@
           <q-item-label caption>{{ item }}</q-item-label>
         </q-item-section>
         <q-item-section style="margin-left: -11px !important; margin-right: 0px !important;" thumbnail>
-          <img style="height: 125px; width: 90px;">
+          <img :src="getPic(count)" v-bind:alt="pic" style="height: 125px; width: 90px;">
         </q-item-section>
       </q-item>
     </q-list>
@@ -25,6 +25,7 @@ export default {
   },
   data () {
     return {
+      count: 0,
       items: [
 
       ]
@@ -34,6 +35,10 @@ export default {
     this.myeditor.destroy()
   },
   methods: {
+    getPic(index) {
+      return this.items[index].image
+      this.count++
+    },
     loadData () {
       this.$q.loading.show({
         message: '<span>يرجى الأنتظار</span>'
