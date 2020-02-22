@@ -21,10 +21,12 @@ export default {
 
   },
   data () {
-    items: [
+    return {
+      items: [
       { message: 'Foo' },
       { message: 'Bar' }
     ]
+    }
   },
   beforeDestroy () {
     this.myeditor.destroy()
