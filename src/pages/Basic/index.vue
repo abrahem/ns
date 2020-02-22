@@ -35,6 +35,7 @@ export default {
       this.$axios
         .get('https://snoanime.com/ns/api/new/')
         .then(response => {
+          var self = this
           this.data = response.data
           self.items = response.data
         })
