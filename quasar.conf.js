@@ -55,11 +55,13 @@ module.exports = function (ctx) {
         'QItemSection',
         'QItemLabel',
         'QScrollArea',
-        'QCheckbox'
+        'QCheckbox',
+        'QDialog'
       ],
 
       directives: [
-        'Ripple'
+        'Ripple',
+        'ClosePopup'
       ],
       // Quasar plugins
       plugins: [
