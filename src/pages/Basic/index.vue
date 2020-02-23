@@ -19,47 +19,29 @@
       transition-hide="slide-down"
     >
       <div class="bg-primary text-white">
-        <div>
-          <q-space />
-
-          <q-btn dense flat icon="minimize" @click="maximizedToggle = false" :disable="!maximizedToggle">
-            <q-tooltip v-if="maximizedToggle" content-class="bg-white text-primary">Minimize</q-tooltip>
-          </q-btn>
-          <q-btn dense flat icon="crop_square" @click="maximizedToggle = true" :disable="maximizedToggle">
-            <q-tooltip v-if="!maximizedToggle" content-class="bg-white text-primary">Maximize</q-tooltip>
-          </q-btn>
-          <q-btn dense flat icon="close" v-close-popup>
-            <q-tooltip content-class="bg-white text-primary">Close</q-tooltip>
-          </q-btn>
-        </div>
-
-  <q-layout view="hHh lpR fFf">
-
-    <q-header elevated class="bg-primary text-white" height-hint="98">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
-          </q-avatar>
-          Title
-        </q-toolbar-title>
-      </q-toolbar>
-
-      <q-tabs align="left">
-        <q-route-tab to="/menu-bubble" label="Page One" />
-        <q-route-tab to="/floating-menu" label="Page Two" />
-        <q-route-tab to="/links" label="Page Three" />
-      </q-tabs>
-    </q-header>
-
-    <q-page-container>
-      <router-view />
-    </q-page-container>
-
-  </q-layout>
-      </div>
-    </q-dialog>
-  </q-page>
+        <q-layout view="hHh lpR fFf">
+          <q-header elevated class="bg-primary text-white" height-hint="98">
+            <q-toolbar>
+              <q-btn v-close-popup flat dense round aria-label="الخيارات">
+                <q-icon name="menu" />
+                </q-btn>
+                <q-toolbar-title>
+                  المعلومات
+                  </q-toolbar-title>
+                  </q-toolbar>
+                  <q-tabs align="left">
+                    <q-route-tab @click="alert('demo 1')" label="Page One" />
+                    <q-route-tab @click="alert('demo 2')" label="Page Two" />
+                    <q-route-tab @click="alert('demo 3')" label="Page Three" />
+                    </q-tabs>
+                    </q-header>
+                    <q-page-container>
+                      <router-view />
+                      </q-page-container>
+                      </q-layout>
+                      </div>
+                      </q-dialog>
+                      </q-page>
 </template>
 
 <script>
