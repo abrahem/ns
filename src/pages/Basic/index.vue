@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
         <q-list bordered>
-      <q-item v-for="item in items" v-bind:key="item.id" style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
+      <q-item v-for="item in items" v-bind:key="item.id" @click="dialog = true" style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section style="text-align-last: right;margin-bottom: auto;padding-top: 8px;">
           <q-item-label>{{ item.name }}</q-item-label>
           <q-item-label caption>{{ item.epName }}</q-item-label>
@@ -11,6 +11,37 @@
         </q-item-section>
       </q-item>
     </q-list>
+        <q-dialog
+      v-model="dialog"
+      persistent
+      :maximized="maximizedToggle"
+      transition-show="slide-up"
+      transition-hide="slide-down"
+    >
+      <q-card class="bg-primary text-white">
+        <q-bar>
+          <q-space />
+
+          <q-btn dense flat icon="minimize" @click="maximizedToggle = false" :disable="!maximizedToggle">
+            <q-tooltip v-if="maximizedToggle" content-class="bg-white text-primary">Minimize</q-tooltip>
+          </q-btn>
+          <q-btn dense flat icon="crop_square" @click="maximizedToggle = true" :disable="maximizedToggle">
+            <q-tooltip v-if="!maximizedToggle" content-class="bg-white text-primary">Maximize</q-tooltip>
+          </q-btn>
+          <q-btn dense flat icon="close" v-close-popup>
+            <q-tooltip content-class="bg-white text-primary">Close</q-tooltip>
+          </q-btn>
+        </q-bar>
+
+        <q-card-section>
+          <div class="text-h6">Alert</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus sit voluptate voluptas eveniet porro. Rerum blanditiis perferendis totam, ea at omnis vel numquam exercitationem aut, natus minima, porro labore.
+        </q-card-section>
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
 
@@ -28,7 +59,9 @@ export default {
       count: 0,
       items: [
 
-      ]
+      ],
+      dialog: false,
+      maximizedToggle: true
     }
   },
   beforeDestroy () {
