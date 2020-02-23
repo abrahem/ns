@@ -33,13 +33,30 @@
           </q-btn>
         </div>
 
-        <q-item-section>
-          <div class="text-h6">Alert</div>
-        <q-item-section>
+  <q-layout view="hHh lpR fFf">
 
-        <q-item-section class="q-pt-none">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus sit voluptate voluptas eveniet porro. Rerum blanditiis perferendis totam, ea at omnis vel numquam exercitationem aut, natus minima, porro labore.
-        <q-item-section>
+    <q-header elevated class="bg-primary text-white" height-hint="98">
+      <q-toolbar>
+        <q-toolbar-title>
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
+          </q-avatar>
+          Title
+        </q-toolbar-title>
+      </q-toolbar>
+
+      <q-tabs align="left">
+        <q-route-tab to="/menu-bubble" label="Page One" />
+        <q-route-tab to="/floating-menu" label="Page Two" />
+        <q-route-tab to="/links" label="Page Three" />
+      </q-tabs>
+    </q-header>
+
+    <q-page-container>
+      <router-view />
+    </q-page-container>
+
+  </q-layout>
       </div>
     </q-dialog>
   </q-page>
