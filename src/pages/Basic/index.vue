@@ -29,12 +29,38 @@
           المعلومات
         </q-toolbar-title>
       </q-toolbar>
+        <q-tabs
+          v-model="tab"
+          dense
+          class="text-grey"
+          active-color="primary"
+          indicator-color="primary"
+          align="justify"
+          narrow-indicator
+        >
+          <q-tab name="mails" label="Mails" />
+          <q-tab name="alarms" label="Alarms" />
+          <q-tab name="movies" label="Movies" />
+        </q-tabs>
+        
+         <q-separator />
 
-      <q-tabs style="background-color: #673ab7;" align="center">
-        <q-route-tab @click="alert('1')" label="Page One" />
-        <q-route-tab @click="alert('2')" label="Page Two" />
-        <q-route-tab to="/links" label="Page Three" />
-      </q-tabs>
+                 <q-tab-panels v-model="tab" animated>
+          <q-tab-panel name="mails">
+            <div class="text-h6">Mails</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </q-tab-panel>
+
+          <q-tab-panel name="alarms">
+            <div class="text-h6">Alarms</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </q-tab-panel>
+
+          <q-tab-panel name="movies">
+            <div class="text-h6">Movies</div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </q-tab-panel>
+        </q-tab-panels>
     </q-header>
 
     <q-page-container>
