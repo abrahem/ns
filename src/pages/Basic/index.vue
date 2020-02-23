@@ -18,30 +18,33 @@
       transition-show="slide-up"
       transition-hide="slide-down"
     >
-      <div>
-        <q-layout view="hHh lpR fFf">
-          <q-header elevated class="bg-primary text-white" height-hint="98">
-            <q-toolbar>
-              <q-btn v-close-popup flat dense round aria-label="الخيارات">
-                <q-icon name="menu" />
-                </q-btn>
-                <q-toolbar-title>
-                  المعلومات
-                  </q-toolbar-title>
-                  </q-toolbar>
-                  <q-tabs align="left">
-                    <q-route-tab @click="alert('demo 1')" label="Page One" />
-                    <q-route-tab @click="alert('demo 2')" label="Page Two" />
-                    <q-route-tab @click="alert('demo 3')" label="Page Three" />
-                    </q-tabs>
-                    </q-header>
-                    <q-page-container>
-                      <router-view />
-                      </q-page-container>
-                      </q-layout>
-                      </div>
-                      </q-dialog>
-                      </q-page>
+      <div style="background-color: #ffffff;">
+  <q-layout view="hHh lpR fFf">
+    <q-header elevated class="bg-primary text-white" height-hint="98">
+      <q-toolbar>
+          <q-btn v-close-popup flat dense round aria-label="الخيارات">
+          <q-icon name="menu" />
+        </q-btn>
+        <q-toolbar-title>
+          المعلومات
+        </q-toolbar-title>
+      </q-toolbar>
+
+      <q-tabs align="left">
+        <q-route-tab to="/menu-bubble" label="Page One" />
+        <q-route-tab to="/floating-menu" label="Page Two" />
+        <q-route-tab to="/links" label="Page Three" />
+      </q-tabs>
+    </q-header>
+
+    <q-page-container>
+      <router-view />
+    </q-page-container>
+
+  </q-layout>
+      </div>
+    </q-dialog>
+  </q-page>
 </template>
 
 <script>
