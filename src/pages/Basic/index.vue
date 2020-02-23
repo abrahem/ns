@@ -18,7 +18,7 @@
       transition-show="slide-up"
       transition-hide="slide-down"
     >
-      <div class="bg-primary text-white">
+      <div>
         <q-layout view="hHh lpR fFf">
           <q-header elevated class="bg-primary text-white" height-hint="98">
             <q-toolbar>
