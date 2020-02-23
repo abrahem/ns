@@ -84,6 +84,7 @@ export default {
           self.items = response.data
         })
         .catch(() => {
+          this.$q.loading.hide()
           this.$q.notify({
             color: 'negative',
             position: 'top',
