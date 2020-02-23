@@ -30,9 +30,9 @@
         </q-toolbar-title>
       </q-toolbar>
 
-      <q-tabs align="left">
-        <q-route-tab to="/menu-bubble" label="Page One" />
-        <q-route-tab to="/floating-menu" label="Page Two" />
+      <q-tabs style="background-color: #673ab7;" align="center">
+        <q-route-tab @click="alert('1')" label="Page One" />
+        <q-route-tab @click="alert('2')" label="Page Two" />
         <q-route-tab to="/links" label="Page Three" />
       </q-tabs>
     </q-header>
