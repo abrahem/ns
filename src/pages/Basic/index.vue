@@ -23,7 +23,7 @@
     <q-header elevated class="bg-primary text-white" height-hint="98">
       <q-toolbar>
           <q-btn v-close-popup flat dense round aria-label="الخيارات">
-          <q-icon name="menu" />
+          <q-icon name="back" />
         </q-btn>
         <q-toolbar-title>
           المعلومات
