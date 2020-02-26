@@ -36,7 +36,7 @@
         </q-tabs>
     </q-header>
     <q-page-container>
-        <q-tab-panels style="height: -webkit-fill-available !important;" v-model="tab" animated class="bg-primary text-white">
+        <q-tab-panels v-model="tab" animated class="text-black">
           <q-tab-panel name="info">
             <div class="text-h6">Mails</div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
