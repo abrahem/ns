@@ -29,8 +29,6 @@
           المعلومات
         </q-toolbar-title>
       </q-toolbar>
-    </q-header>
-    <q-page-container>
         <q-tabs
           v-model="tab"
           dense
@@ -43,8 +41,9 @@
           <q-tab name="alarms" label="Alarms" />
           <q-tab name="movies" label="Movies" />
         </q-tabs>
-
-        <q-tab-panels v-model="tab" animated class="bg-primary text-white">
+    </q-header>
+    <q-page-container>
+        <q-tab-panels style="height: -webkit-fill-available !important;" v-model="tab" animated class="bg-primary text-white">
           <q-tab-panel name="mails">
             <div class="text-h6">Mails</div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
