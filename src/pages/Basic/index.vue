@@ -42,9 +42,7 @@
           <q-tab name="alarms" label="Alarms" />
           <q-tab name="movies" label="Movies" />
         </q-tabs>
-        
          <q-separator />
-
                  <q-tab-panels v-model="tab" animated>
           <q-tab-panel name="mails">
             <div class="text-h6">Mails</div>
