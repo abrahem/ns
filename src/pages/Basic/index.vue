@@ -34,7 +34,7 @@
           dense
           class="text-grey"
           active-color="primary"
-          indicator-color="primary"
+          indicator-color="#ffffff"
           align="justify"
           narrow-indicator
         >
@@ -43,7 +43,9 @@
           <q-tab name="movies" label="Movies" />
         </q-tabs>
          <q-separator />
-                 <q-tab-panels v-model="tab" animated>
+    </q-header>
+    <q-page-container>
+             <q-tab-panels v-model="tab" animated>
           <q-tab-panel name="mails">
             <div class="text-h6">Mails</div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -59,12 +61,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </q-tab-panel>
         </q-tab-panels>
-    </q-header>
-
-    <q-page-container>
-      <router-view />
     </q-page-container>
-
   </q-layout>
       </div>
     </q-dialog>
