@@ -25,7 +25,7 @@
           <q-btn v-close-popup flat dense round aria-label="الخيارات">
           <q-icon name="arrow_back" />
         </q-btn>
-        <q-toolbar-title>
+        <q-toolbar-title id="titles">
           {{ itemsinfo.main.genres }}
         </q-toolbar-title>
        <q-btn style="color: red;" dense flat round icon="favorite_border" />
@@ -146,6 +146,16 @@ export default {
         this.$q.loading.hide()
         var self = this
         self.itemsinfo = response.data
+        const Hello = {
+        props: ['text'],
+        template: '<div>{{ text }}</div>',
+        };
+        const HelloCtor = Vue.extend(Hello);
+        const vm = new HelloCtor({
+          propsData: {
+            text: 'HI :)'
+            }
+        }).$mount('#titles');
       })
       .catch(() => {
         this.$q.loading.hide()
