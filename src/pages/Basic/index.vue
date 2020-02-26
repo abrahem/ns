@@ -156,7 +156,7 @@ export default {
             text: 'HI :)'
           }
         }).$mount('#titles')
-        vm;
+        vm = null
       })
       .catch(() => {
         this.$q.loading.hide()
