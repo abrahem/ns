@@ -82,7 +82,7 @@
 <script>
 import { UiMixin, PageMixin } from 'src/mixins'
 import Toolbar from './toolbar'
-import Vue from 'Vue'
+import Vue from 'vue'
 export default {
   mixins: [UiMixin, PageMixin],
   components: {
