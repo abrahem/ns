@@ -40,18 +40,12 @@
           <q-tab-panel name="info">
     <q-card class="my-card">
       <q-card-section horizontal>
-        <q-img
-          class="col-5"
-          src="https://cdn.quasar.dev/img/parallax1.jpg"
-        />
-
-        <q-card-section>
-          "testkasdlasdlaskldaskdklaskdasldasldasldaskdkasdadadadas"
+        <q-img style="height: 145px; width: 110px;" class="col-5" src="https://cdn.quasar.dev/img/parallax1.jpg"/>
+        <q-card-section style="word-break: break-all; text-align: center;">
+          testkasdlasdlaskldaskdklaskdasldasldasldaskdkasdadadadas
         </q-card-section>
       </q-card-section>
-
       <q-separator />
-
       <q-card-actions>
         <q-btn flat round icon="event" />
         <q-btn flat>
@@ -143,5 +137,5 @@ export default {
 <style lang="sass" scoped>
 .my-card
   width: 100%
-  max-width: 350px
+  max-width: 100%
 </style>
