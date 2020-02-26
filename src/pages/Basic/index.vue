@@ -154,8 +154,8 @@ export default {
           position: 'top',
           message: 'توجد مشكلة في الشبكة حاول أعادة الفتح',
           icon: 'report_problem'
+        })
       })
-    })
   }
 }
 </script>
