@@ -7,7 +7,7 @@
           <q-item-label caption>{{ item.epName }}</q-item-label>
         </q-item-section>
         <q-item-section style="margin-left: -11px !important; margin-right: 0px !important;" thumbnail>
-          <img v-bind:src="item.image" v-bind:alt="pic" style="height: 125px; width: 90px;">
+          <q-img :src="item.image" :alt="pic" spinner-color="red" style="height: 125px; width: 90px;"/>
         </q-item-section>
       </q-item>
     </q-list>
@@ -26,6 +26,7 @@
           <q-icon name="arrow_back" />
         </q-btn>
         <q-toolbar-title>
+          {{ itemsinfo.main.genres }}
         </q-toolbar-title>
        <q-btn style="color: red;" dense flat round icon="favorite_border" />
       </q-toolbar>
@@ -41,8 +42,8 @@
     <q-card class="my-card">
       <q-card-section horizontal>
         <q-img style="height: 145px; width: 110px;" class="col-5" src="https://cdn.quasar.dev/img/parallax1.jpg"/>
-        <q-card-section style="word-break: break-all; text-align: center;">
-          testkasdlasdlaskldaskdklaskdasldasldasldaskdkasdadadadas
+        <q-card-section style="word-break: break-all; text-align: center; width: 100%;">
+          {{ itemsinfo.main.story }}
         </q-card-section>
       </q-card-section>
       <q-separator />
@@ -95,7 +96,10 @@ export default {
       ],
       dialog: false,
       maximizedToggle: true,
-      tab: 'info'
+      tab: 'info',
+      itemsinfo: {
+
+      },
     }
   },
   beforeDestroy () {
@@ -131,7 +135,28 @@ export default {
   created () {
     this.setToolbar(Toolbar)
     this.loadData()
-  }
+  },
+    loadinfo (id) {
+      this.$q.loading.show({
+        message: '<span>يرجى الأنتظار</span>'
+      })
+      this.$axios
+        .get('https://snoanime.com/ns/api/new/info.php/?url=5385')
+        .then(response => {
+          this.$q.loading.hide()
+          var self = this
+          self.itemsinfo = response.data
+        })
+        .catch(() => {
+          this.$q.loading.hide()
+          this.$q.notify({
+            color: 'negative',
+            position: 'top',
+            message: 'توجد مشكلة في الشبكة حاول أعادة الفتح',
+            icon: 'report_problem'
+          })
+        })
+    }
 }
 </script>
 <style lang="sass" scoped>
