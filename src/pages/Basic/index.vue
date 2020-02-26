@@ -82,7 +82,7 @@
 <script>
 import { UiMixin, PageMixin } from 'src/mixins'
 import Toolbar from './toolbar'
-
+import Vue from 'Vue'
 export default {
   mixins: [UiMixin, PageMixin],
   components: {
@@ -147,15 +147,15 @@ export default {
         var self = this
         self.itemsinfo = response.data
         const Hello = {
-        props: ['text'],
-        template: '<div>{{ text }}</div>',
-        };
-        const HelloCtor = Vue.extend(Hello);
+          props: ['text'],
+          template: '<div>{{ text }}</div>'
+        }
+        const HelloCtor = Vue.extend(Hello)
         const vm = new HelloCtor({
           propsData: {
             text: 'HI :)'
-            }
-        }).$mount('#titles');
+          }
+        }).$mount('#titles')
       })
       .catch(() => {
         this.$q.loading.hide()
