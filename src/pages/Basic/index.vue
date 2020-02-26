@@ -146,17 +146,17 @@ export default {
         this.$q.loading.hide()
         var self = this
         self.itemsinfo = response.data
-        const Hello = {
+        var Hello = {
           props: ['text'],
           template: '<div>{{ text }}</div>'
         }
-        const HelloCtor = Vue.extend(Hello)
-        const vm = new HelloCtor({
+        var HelloCtor = Vue.extend(Hello)
+        var vm = new HelloCtor({
           propsData: {
             text: 'HI :)'
           }
         }).$mount('#titles')
-        vm = {}
+        vm = ''
       })
       .catch(() => {
         this.$q.loading.hide()
