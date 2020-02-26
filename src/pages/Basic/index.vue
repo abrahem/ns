@@ -26,7 +26,6 @@
           <q-icon name="arrow_back" />
         </q-btn>
         <q-toolbar-title id="titles">
-          {{ itemsinfo.main.genres }}
         </q-toolbar-title>
        <q-btn style="color: red;" dense flat round icon="favorite_border" />
       </q-toolbar>
@@ -43,7 +42,6 @@
       <q-card-section horizontal>
         <q-img style="height: 145px; width: 110px;" class="col-5" src="https://cdn.quasar.dev/img/parallax1.jpg"/>
         <q-card-section style="word-break: break-all; text-align: center; width: 100%;">
-          {{ itemsinfo.main.story }}
         </q-card-section>
       </q-card-section>
       <q-separator />
