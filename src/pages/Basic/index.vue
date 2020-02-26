@@ -29,23 +29,22 @@
           المعلومات
         </q-toolbar-title>
       </q-toolbar>
+    </q-header>
+    <q-page-container>
         <q-tabs
           v-model="tab"
           dense
-          class="text-grey"
+          class="bg-grey-3 text-grey-7"
           active-color="primary"
-          indicator-color="#ffffff"
+          indicator-color="purple"
           align="justify"
-          narrow-indicator
         >
           <q-tab name="mails" label="Mails" />
           <q-tab name="alarms" label="Alarms" />
           <q-tab name="movies" label="Movies" />
         </q-tabs>
-         <q-separator />
-    </q-header>
-    <q-page-container>
-             <q-tab-panels v-model="tab" animated>
+
+        <q-tab-panels v-model="tab" animated class="bg-primary text-white">
           <q-tab-panel name="mails">
             <div class="text-h6">Mails</div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -84,7 +83,8 @@ export default {
 
       ],
       dialog: false,
-      maximizedToggle: true
+      maximizedToggle: true,
+      tab: 'mails'
     }
   },
   beforeDestroy () {
