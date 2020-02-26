@@ -151,7 +151,7 @@ export default {
           template: '<div>{{ text }}</div>'
         }
         var HelloCtor = Vue.extend(Hello)
-        var vm = new HelloCtor({
+        new HelloCtor({
           propsData: {
             text: 'HI :)'
           }
