@@ -23,7 +23,7 @@
     <q-header elevated class="bg-primary text-white" height-hint="98">
       <q-toolbar>
           <q-btn v-close-popup flat dense round aria-label="الخيارات">
-          <q-icon name="back" />
+          <q-icon name="arrow_back" />
         </q-btn>
         <q-toolbar-title>
           المعلومات
@@ -33,28 +33,28 @@
           v-model="tab"
           dense
           class="bg-grey-3 text-grey-7"
-          active-color="primary"
-          indicator-color="purple"
-          align="justify"
+          active-color="#ffffff"
+          indicator-color="#ffffff"
+          align="center"
         >
-          <q-tab name="mails" label="Mails" />
-          <q-tab name="alarms" label="Alarms" />
-          <q-tab name="movies" label="Movies" />
+          <q-tab name="info" label="المعلومات" />
+          <q-tab name="ep" label="الحلقات" />
+          <q-tab name="commant" label="التعليقات" />
         </q-tabs>
     </q-header>
     <q-page-container>
         <q-tab-panels style="height: -webkit-fill-available !important;" v-model="tab" animated class="bg-primary text-white">
-          <q-tab-panel name="mails">
+          <q-tab-panel name="info">
             <div class="text-h6">Mails</div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </q-tab-panel>
 
-          <q-tab-panel name="alarms">
+          <q-tab-panel name="ep">
             <div class="text-h6">Alarms</div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </q-tab-panel>
 
-          <q-tab-panel name="movies">
+          <q-tab-panel name="commant">
             <div class="text-h6">Movies</div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </q-tab-panel>
@@ -83,7 +83,7 @@ export default {
       ],
       dialog: false,
       maximizedToggle: true,
-      tab: 'mails'
+      tab: 'info'
     }
   },
   beforeDestroy () {
