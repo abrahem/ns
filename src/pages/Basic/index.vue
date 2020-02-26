@@ -27,8 +27,9 @@
         </q-btn>
         <q-toolbar-title>
         </q-toolbar-title>
+       <q-btn dense flat round icon="favorite_border" />
       </q-toolbar>
-        <q-tabs style="color: white !important; background-color: #673ab7;" v-model="tab" dense class="bg-grey-3 text-grey-7" active-color="#ffffff" indicator-color="#ffffff" align="center">
+        <q-tabs style="color: white !important; background-color: #673ab7 !important;" v-model="tab" dense class="bg-grey-3 text-grey-7" active-color="#ffffff" indicator-color="#ffffff" align="justify">
           <q-tab name="info" label="المعلومات" />
           <q-tab name="ep" label="الحلقات" />
           <q-tab name="commant" label="التعليقات" />
