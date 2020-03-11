@@ -138,11 +138,10 @@ export default {
         .then(response => {
           this.$q.loading.hide()
           var self = this
+          self.dialog = true
           self.itemsinfo = response.data
           this.$q.localStorage.set('age', self.itemsinfo.main.age)
-          const item = LocalStorage.get.item('age')
-          self.ages = item
-          self.dialog = true
+          self.ages = LocalStorage.get.item('age')
         })
         .catch(() => {
           this.$q.loading.hide()
