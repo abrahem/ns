@@ -141,8 +141,8 @@ export default {
           self.dialog = true
         })
         .catch(() => {
-            this.$q.loading.hide()
-            this.$q.notify({
+        this.$q.loading.hide()
+        this.$q.notify({
             color: 'negative',
             position: 'top',
             message: 'توجد مشكلة في الشبكة حاول أعادة الفتح',
