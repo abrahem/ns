@@ -89,6 +89,7 @@ export default {
   data () {
     return {
       count: 0,
+      tst: '',
       items: [
 
       ],
@@ -139,7 +140,9 @@ export default {
           var self = this
           self.itemsinfo = response.data
           this.$q.localStorage.set('age', self.itemsinfo.main.age)
-          let item = LocalStorage.get.item('age')
+          this.$q.localStorage.set('test',' ')
+          const item = LocalStorage.get.item('test')
+          self.tst = item
           self.dialog = true
         })
         .catch(() => {
