@@ -80,6 +80,7 @@
 <script>
 import { UiMixin, PageMixin } from 'src/mixins'
 import Toolbar from './toolbar'
+import { LocalStorage, SessionStorage } from 'quasar'
 export default {
   mixins: [UiMixin, PageMixin],
   components: {
