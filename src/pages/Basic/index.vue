@@ -140,7 +140,7 @@ export default {
           })
         })
     },
-    loadinfo (name, image ,id) {
+    loadinfo (name ,image ,id) {
       this.$q.loading.show({
         message: '<span>يرجى الأنتظار</span>'
       })
