@@ -75,7 +75,12 @@ module.exports = function (ctx) {
       ],
       // Quasar plugins
       plugins: [
-        'Notify','Notify','BottomSheet','Loading'
+        'Notify',
+        'Notify',
+        'BottomSheet',
+        'Loading',
+        'LocalStorage',
+        'SessionStorage'
       ],
       config: {
         loading: { /* Loading defaults */ },

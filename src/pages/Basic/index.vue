@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
         <q-list bordered>
-      <q-item v-for="item in items" v-bind:key="item.id" @click="dialog = true, loadinfo()" style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
+      <q-item v-for="item in items" v-bind:key="item.id" @click="loadinfo" style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section style="text-align-last: right;margin-bottom: auto;padding-top: 8px;">
           <q-item-label>{{ item.name }}</q-item-label>
           <q-item-label caption>{{ item.epName }}</q-item-label>
@@ -128,13 +128,8 @@ export default {
             icon: 'report_problem'
           })
         })
-    }
-  },
-  created () {
-    this.setToolbar(Toolbar)
-    this.loadData()
-  },
-  loadinfo () {
+    },
+    loadinfo () {
     this.$q.loading.show({
       message: '<span>يرجى الأنتظار</span>'
     })
@@ -144,16 +139,7 @@ export default {
         this.$q.loading.hide()
         var self = this
         self.itemsinfo = response.data
-        var Hello = {
-          props: ['text'],
-          template: '<div>{{ text }}</div>'
-        }
-        var HelloCtor = Vue.extend(Hello)
-        new HelloCtor({
-          propsData: {
-            text: 'HI :)'
-          }
-        }).$mount('#titles')
+        self.dialog = true
       })
       .catch(() => {
         this.$q.loading.hide()
@@ -164,6 +150,11 @@ export default {
           icon: 'report_problem'
         })
       })
+  }
+  },
+  created () {
+    this.setToolbar(Toolbar)
+    this.loadData()
   }
 }
 </script>
