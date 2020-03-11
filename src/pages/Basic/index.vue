@@ -48,7 +48,7 @@
       <q-card-actions>
         <q-btn flat round icon="event" />
         <q-btn flat>
-          {{ LocalStorage.get.item("age") }}
+          {{ ages }}
         </q-btn>
         <q-btn flat>
           7:00PM
@@ -89,7 +89,7 @@ export default {
   data () {
     return {
       count: 0,
-      tst: '',
+      ages: '',
       items: [
 
       ],
@@ -140,9 +140,8 @@ export default {
           var self = this
           self.itemsinfo = response.data
           this.$q.localStorage.set('age', self.itemsinfo.main.age)
-          this.$q.localStorage.set('test', ' ')
-          const item = LocalStorage.get.item('test')
-          self.tst = item
+          const item = LocalStorage.get.item('age')
+          self.ages = item
           self.dialog = true
         })
         .catch(() => {
