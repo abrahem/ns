@@ -139,6 +139,7 @@ export default {
           var self = this
           self.itemsinfo = response.data
           this.$q.localStorage.set('age', self.itemsinfo.main.age)
+          let item = LocalStorage.get.item('age')
           self.dialog = true
         })
         .catch(() => {
