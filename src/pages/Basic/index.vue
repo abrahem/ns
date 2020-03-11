@@ -48,6 +48,7 @@
       <q-card-actions>
         <q-btn flat round icon="event" />
         <q-btn flat>
+          {{ ages }}
         </q-btn>
         <q-btn flat>
           7:00PM
@@ -138,7 +139,8 @@ export default {
           var self = this
           self.dialog = true
           self.itemsinfo = response.data
-          console.log(self.itemsinfo)
+          console.log(self.itemsinfo.main.age)
+          self.ages = self.itemsinfo.main.age
         })
         .catch(() => {
           this.$q.loading.hide()
