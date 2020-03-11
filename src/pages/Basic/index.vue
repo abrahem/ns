@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
         <q-list bordered>
-      <q-item v-for="item in items" v-bind:key="item.id" @click="loadinfo('3286')" style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
+      <q-item v-for="item in items" v-bind:key="item.id" @click="loadinfo(item.id,name,item.image)" style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section style="text-align-last: right;margin-bottom: auto;padding-top: 8px;">
           <q-item-label>{{ item.name }}</q-item-label>
           <q-item-label caption>{{ item.epName }}</q-item-label>
@@ -88,6 +88,8 @@ export default {
   data () {
     return {
       count: 0,
+      name: '',
+      image: '',
       ages: '',
       rank: '',
       genres: '',
@@ -140,7 +142,7 @@ export default {
           })
         })
     },
-    loadinfo: function (id) {
+    loadinfo: function (id, name, image) {
       this.$q.loading.show({
         message: '<span>يرجى الأنتظار</span>'
       })
@@ -151,6 +153,8 @@ export default {
           var self = this
           self.dialog = true
           self.itemsinfo = response.data
+          self.name = name
+          self.image = image
           self.ages = self.itemsinfo.main.age
           self.rank = self.itemsinfo.main.rank
           self.genres = self.itemsinfo.main.genres
