@@ -25,7 +25,8 @@
           <q-btn v-close-popup flat dense round aria-label="الخيارات">
           <q-icon name="arrow_back" />
         </q-btn>
-        <q-toolbar-title id="titles">
+        <q-toolbar-title>
+          {{ name }}
         </q-toolbar-title>
        <q-btn style="color: red;" dense flat round icon="favorite_border" />
       </q-toolbar>
@@ -40,8 +41,9 @@
           <q-tab-panel name="info">
     <q-card class="my-card">
       <q-card-section horizontal>
-        <q-img style="height: 145px; width: 110px;" class="col-5" src="https://cdn.quasar.dev/img/parallax1.jpg"/>
+        <q-img :src="image" spinner-color="red" style="height: 145px; width: 110px;" class="col-5"/>
         <q-card-section style="word-break: break-all; text-align: center; width: 100%;">
+          {{ story }}
         </q-card-section>
       </q-card-section>
       <q-separator />
