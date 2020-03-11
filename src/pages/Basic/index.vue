@@ -140,12 +140,12 @@ export default {
           })
         })
     },
-    loadinfo (name,image,id) {
+    loadinfo (name, image ,id) {
       this.$q.loading.show({
         message: '<span>يرجى الأنتظار</span>'
       })
       this.$axios
-        .get('https://snoanime.com/ns/api/new/info.php/?url='+id)
+        .get('https://snoanime.com/ns/api/new/info.php/?url=' + id)
         .then(response => {
           this.$q.loading.hide()
           var self = this
