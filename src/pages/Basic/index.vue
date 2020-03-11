@@ -140,7 +140,7 @@ export default {
           var self = this
           self.itemsinfo = response.data
           this.$q.localStorage.set('age', self.itemsinfo.main.age)
-          this.$q.localStorage.set('test',' ')
+          this.$q.localStorage.set('test', ' ')
           const item = LocalStorage.get.item('test')
           self.tst = item
           self.dialog = true
