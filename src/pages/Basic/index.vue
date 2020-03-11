@@ -48,7 +48,7 @@
       <q-card-actions>
         <q-btn flat round icon="event" />
         <q-btn flat>
-          {{ ages }}
+          {{ itemsinfo.main.age }}
         </q-btn>
         <q-btn flat>
           7:00PM
@@ -80,7 +80,6 @@
 <script>
 import { UiMixin, PageMixin } from 'src/mixins'
 import Toolbar from './toolbar'
-import { LocalStorage } from 'quasar'
 export default {
   mixins: [UiMixin, PageMixin],
   components: {
@@ -140,8 +139,6 @@ export default {
           var self = this
           self.dialog = true
           self.itemsinfo = response.data
-          this.$q.localStorage.set('age', self.itemsinfo.main.age)
-          self.ages = LocalStorage.get.item('age')
         })
         .catch(() => {
           this.$q.loading.hide()
