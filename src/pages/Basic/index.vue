@@ -80,7 +80,6 @@
 <script>
 import { UiMixin, PageMixin } from 'src/mixins'
 import Toolbar from './toolbar'
-import Vue from 'vue'
 export default {
   mixins: [UiMixin, PageMixin],
   components: {
@@ -131,19 +130,19 @@ export default {
     },
     loadinfo () {
     this.$q.loading.show({
-      message: '<span>يرجى الأنتظار</span>'
-    })
-    this.$axios
-      .get('https://snoanime.com/ns/api/new/info.php/?url=1196')
-      .then(response => {
-        this.$q.loading.hide()
-        var self = this
-        self.itemsinfo = response.data
-        self.dialog = true
+         message: '<span>يرجى الأنتظار</span>'
       })
-      .catch(() => {
-        this.$q.loading.hide()
-        this.$q.notify({
+      this.$axios
+        .get('https://snoanime.com/ns/api/new/info.php/?url=1196')
+        .then(response => {
+          this.$q.loading.hide()
+          var self = this
+          self.itemsinfo = response.data
+          self.dialog = true
+        })
+        .catch(() => {
+          this.$q.loading.hide()
+          this.$q.notify({
           color: 'negative',
           position: 'top',
           message: 'توجد مشكلة في الشبكة حاول أعادة الفتح',
