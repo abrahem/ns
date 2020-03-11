@@ -48,7 +48,7 @@
       <q-card-actions>
         <q-btn flat round icon="event" />
         <q-btn flat>
-          5:30PM
+          {{ localStorage.get.item("age") }}
         </q-btn>
         <q-btn flat>
           7:00PM
@@ -100,7 +100,7 @@ export default {
     }
   },
   beforeDestroy () {
-    this.myeditor.destroy()
+    
   },
   methods: {
     getPic (index) {
@@ -138,6 +138,7 @@ export default {
           this.$q.loading.hide()
           var self = this
           self.itemsinfo = response.data
+          this.$q.localStorage.set("age", self.itemsinfo.main.age)
           self.dialog = true
         })
         .catch(() => {
