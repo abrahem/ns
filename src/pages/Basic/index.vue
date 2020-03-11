@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
         <q-list bordered>
-      <q-item v-for="item in items" v-bind:key="item.id" @click="loadinfo(item.id,name,item.image)" style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
+      <q-item v-for="item in items" v-bind:key="item.id" @click="loadinfo(item.id,item.name,item.image)" style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section style="text-align-last: right;margin-bottom: auto;padding-top: 8px;">
           <q-item-label>{{ item.name }}</q-item-label>
           <q-item-label caption>{{ item.epName }}</q-item-label>
