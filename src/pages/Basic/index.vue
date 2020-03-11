@@ -129,8 +129,8 @@ export default {
         })
     },
     loadinfo () {
-    this.$q.loading.show({
-         message: '<span>يرجى الأنتظار</span>'
+      this.$q.loading.show({
+        message: '<span>يرجى الأنتظار</span>'
       })
       this.$axios
         .get('https://snoanime.com/ns/api/new/info.php/?url=1196')
@@ -141,15 +141,15 @@ export default {
           self.dialog = true
         })
         .catch(() => {
-          this.$q.loading.hide()
-          this.$q.notify({
-          color: 'negative',
-          position: 'top',
-          message: 'توجد مشكلة في الشبكة حاول أعادة الفتح',
-          icon: 'report_problem'
+            this.$q.loading.hide()
+            this.$q.notify({
+            color: 'negative',
+            position: 'top',
+            message: 'توجد مشكلة في الشبكة حاول أعادة الفتح',
+            icon: 'report_problem'
+          })
         })
-      })
-  }
+    }
   },
   created () {
     this.setToolbar(Toolbar)
