@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
         <q-list bordered>
-      <q-item v-for="item in items" v-bind:key="item.id" @click="loadinfo" style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
+      <q-item v-for="item in items" v-bind:key="item.id" @click="loadinfo('name','img','3286')" style="padding: 0 !important; border-bottom: inherit;" clickable v-ripple>
         <q-item-section style="text-align-last: right;margin-bottom: auto;padding-top: 8px;">
           <q-item-label>{{ item.name }}</q-item-label>
           <q-item-label caption>{{ item.epName }}</q-item-label>
@@ -89,6 +89,18 @@ export default {
     return {
       count: 0,
       ages: '',
+      rank: '',
+      genres: '',
+      story: '',
+      ep: [
+
+      ],
+      other: [
+
+      ],
+      commants: [
+
+      ],
       items: [
 
       ],
@@ -128,19 +140,24 @@ export default {
           })
         })
     },
-    loadinfo () {
+    loadinfo (name,image,id) {
       this.$q.loading.show({
         message: '<span>يرجى الأنتظار</span>'
       })
       this.$axios
-        .get('https://snoanime.com/ns/api/new/info.php/?url=1196')
+        .get('https://snoanime.com/ns/api/new/info.php/?url='+id)
         .then(response => {
           this.$q.loading.hide()
           var self = this
           self.dialog = true
           self.itemsinfo = response.data
-          console.log(self.itemsinfo.main.age)
           self.ages = self.itemsinfo.main.age
+          self.rank = self.itemsinfo.main.rank
+          self.genres = self.itemsinfo.main.genres
+          self.story = self.itemsinfo.main.story
+          self.ep = self.itemsinfo.ep
+          self.other = self.itemsinfo.other
+          self.commants = self.itemsinfo.commants
         })
         .catch(() => {
           this.$q.loading.hide()
