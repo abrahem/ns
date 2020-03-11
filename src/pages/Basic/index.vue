@@ -101,7 +101,6 @@ export default {
     }
   },
   beforeDestroy () {
-    
   },
   methods: {
     getPic (index) {
@@ -139,7 +138,7 @@ export default {
           this.$q.loading.hide()
           var self = this
           self.itemsinfo = response.data
-          this.$q.LocalStorage.set("age", self.itemsinfo.main.age)
+          this.$q.localStorage.set('age', self.itemsinfo.main.age)
           self.dialog = true
         })
         .catch(() => {
