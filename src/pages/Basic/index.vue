@@ -77,9 +77,9 @@
       style="height: 170px; width: 100%; background-color: transparent !important;"
     >
       <div class="row no-wrap">
-    <q-card v-for="others in other" v-bind:key="others.id" class="my-card">
+    <q-card v-for="others in other" v-bind:key="others.id" class="my-cardt">
       <q-img :src="others.image" spinner-color="red" basic>
-        <div class="absolute-bottom text-subtitle2 text-center">
+        <div class="cardtext absolute-bottom text-subtitle2 text-center">
           {{ others.name }}
         </div>
       </q-img>
@@ -214,4 +214,14 @@ export default {
 .my-card
   width: 100%
   max-width: 100%
+.my-cardt
+  height: 100px;
+  width: 115px;
+  padding: 2px;
+  max-width: 115px !important;
+.cardtext
+  background: rgba(0, 0, 0, 0.61);
+  padding: 8px;
+  font-size: 15px !important;
+  font: message-box;
 </style>
