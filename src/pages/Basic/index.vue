@@ -48,8 +48,8 @@
       </q-card-section>
     </q-card>
     <q-card style="margin-top: 10px;" class="my-card">
-      <q-card-section vertical>
-        <q-card-section style="word-break: break-all; text-align: center; width: 100%;">
+      <q-card-section style="padding: 0px;" vertical>
+        <q-card-section style="padding: 9px; word-break: break-all; text-align: center; width: 100%;">
           التصنيفات
           <q-separator style="background-color: transparent;" />
           <h6 style="font-size: medium;">{{ genres }}</h6>
@@ -217,7 +217,7 @@ export default {
 .my-cardt
   height: 170px;
   width: 115px;
-  margin: 2px;
+  margin: 3px;
   padding: 0.6px;
   max-width: 115px!important;
 .cardtext
