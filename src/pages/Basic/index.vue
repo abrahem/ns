@@ -46,22 +46,37 @@
           {{ story }}
         </q-card-section>
       </q-card-section>
-      <q-separator />
-      <q-card-actions>
-        <q-btn flat round icon="event" />
-        <q-btn flat>
+    </q-card>
+    <q-card class="my-card">
+      <q-card-section vertical>
+        <q-card-section style="word-break: break-all; text-align: center; width: 100%;">
+          التصنيفات
+          <q-separator />
+          {{ genres }}
+          <q-separator />
+          تاريخ ألانمي
+          <q-separator />
+          2020
+          <q-separator />
+          الحالة
+          <q-separator />
+          مستمر
+          <q-separator />
+          التقيم العمري
+          <q-separator />
           {{ ages }}
-        </q-btn>
-        <q-btn flat>
-          7:00PM
-        </q-btn>
-        <q-btn flat color="primary">
-          Reserve
-        </q-btn>
-      </q-card-actions>
+          <q-separator />
+          التقيم العالمي
+          <q-separator />
+          {{ rank }}
+          <q-separator />
+          أخرى
+          <q-separator />
+          خالي بشكل مؤقت
+        </q-card-section>
+      </q-card-section>
     </q-card>
           </q-tab-panel>
-
           <q-tab-panel name="ep">
             <div class="text-h6">Alarms</div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
