@@ -74,11 +74,11 @@
           <q-separator style="background-color: transparent;" />
     <q-scroll-area
       horizontal
-      style="height: 170px; width: 100%; background-color: transparent !important;"
+      style="height: 175px; width: 100%; background-color: transparent !important;"
     >
       <div class="row no-wrap">
     <q-card v-for="others in other" v-bind:key="others.id" class="my-cardt">
-      <q-img :src="others.image" spinner-color="red" basic>
+      <q-img style="height: 170px;" :src="others.image" spinner-color="red" basic>
         <div class="cardtext absolute-bottom text-subtitle2 text-center">
           {{ others.name }}
         </div>
@@ -215,10 +215,11 @@ export default {
   width: 100%
   max-width: 100%
 .my-cardt
-  height: 100px;
+  height: 170px;
   width: 115px;
-  padding: 2px;
-  max-width: 115px !important;
+  margin: 2px;
+  padding: 0.6px;
+  max-width: 115px!important;
 .cardtext
   background: rgba(0, 0, 0, 0.61);
   padding: 8px;
