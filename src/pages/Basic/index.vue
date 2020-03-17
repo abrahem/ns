@@ -47,32 +47,32 @@
         </q-card-section>
       </q-card-section>
     </q-card>
-    <q-card class="my-card">
+    <q-card style="margin-top: 10px;" class="my-card">
       <q-card-section vertical>
         <q-card-section style="word-break: break-all; text-align: center; width: 100%;">
           التصنيفات
-          <q-separator />
-          {{ genres }}
-          <q-separator />
+          <q-separator style="background-color: transparent;" />
+          <h6 style="font-size: medium;">{{ genres }}</h6>
+          <q-separator style="background-color: transparent;" />
           تاريخ ألانمي
-          <q-separator />
-          2020
-          <q-separator />
+          <q-separator style="background-color: transparent;" />
+          <h6 style="font-size: medium;">2020</h6>
+          <q-separator style="background-color: transparent;" />
           الحالة
-          <q-separator />
-          مستمر
-          <q-separator />
+          <q-separator style="background-color: transparent;" />
+          <h6 style="font-size: medium;">مستمر</h6>
+          <q-separator style="background-color: transparent;" />
           التقيم العمري
-          <q-separator />
-          {{ ages }}
-          <q-separator />
+          <q-separator style="background-color: transparent;" />
+          <h6 style="font-size: medium;">{{ ages }}</h6>
+          <q-separator style="background-color: transparent;" />
           التقيم العالمي
-          <q-separator />
-          {{ rank }}
-          <q-separator />
+          <q-separator style="background-color: transparent;" />
+          <h6 style="font-size: medium;">{{ rank }}</h6>
+          <q-separator style="background-color: transparent;" />
           أخرى
-          <q-separator />
-          خالي بشكل مؤقت
+          <q-separator style="background-color: transparent;" />
+          <h6 style="font-size: medium;">خالي بشكل مؤقت</h6>
         </q-card-section>
       </q-card-section>
     </q-card>
