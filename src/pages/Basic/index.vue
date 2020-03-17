@@ -72,7 +72,20 @@
           <q-separator style="background-color: transparent;" />
           أخرى
           <q-separator style="background-color: transparent;" />
-          <h6 style="font-size: medium;">خالي بشكل مؤقت</h6>
+    <q-scroll-area
+      horizontal
+      style="height: 170px; width: 100%; background-color: transparent !important;"
+    >
+      <div class="row no-wrap">
+    <q-card v-for="other in others" v-bind:key="other.id" class="my-card">
+      <q-img :src="others.image" spinner-color="red" basic>
+        <div class="absolute-bottom text-subtitle2 text-center">
+          {{ others.name }}
+        </div>
+      </q-img>
+    </q-card>
+      </div>
+    </q-scroll-area>
         </q-card-section>
       </q-card-section>
     </q-card>
