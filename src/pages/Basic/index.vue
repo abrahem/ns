@@ -91,10 +91,14 @@
     </q-card>
           </q-tab-panel>
           <q-tab-panel name="ep">
-            <div class="text-h6">Alarms</div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    <q-card style="margin-top: 10px;" class="my-card">
+      <q-card-section style="padding: 0px;" vertical>
+    <q-scroll-area style="height: 100%; width: 100%;">
+        <q-btn v-for="eps in ep" v-bind:key="eps.id" unelevated rounded color="white" :label="eps.name" />
+    </q-scroll-area>
+      </q-card-section>
+    </q-card>
           </q-tab-panel>
-
           <q-tab-panel name="commant">
             <div class="text-h6">Movies</div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -217,7 +221,7 @@ export default {
 .my-cardt
   height: 170px;
   width: 115px;
-  margin: 3px;
+  margin: 4px;
   padding: 0.6px;
   max-width: 115px!important;
 .cardtext
