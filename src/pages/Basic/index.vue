@@ -90,17 +90,15 @@
       </q-card-section>
     </q-card>
           </q-tab-panel>
-          <q-tab-panel name="ep">
+          <q-tab-panel style="padding: 7px !important;" name="ep">
     <q-card style="margin-top: 10px;" class="my-card">
-      <q-card-section style="padding: 3px; margin: 2px" vertical>
-    <q-btn v-for="eps in ep" v-bind:key="eps.id" color="white" style="width: 100%; padding: 3px; margin: 2px" push>
+    <q-btn v-for="eps in ep" v-bind:key="eps.id" color="white" style="width: 100%; padding: 5px; margin: 3px" push>
       <div class="row items-center no-wrap">
         <div style="color: black;" class="text-center">
           {{ eps.name }}
         </div>
       </div>
     </q-btn>
-      </q-card-section>
     </q-card>
           </q-tab-panel>
           <q-tab-panel name="commant">
