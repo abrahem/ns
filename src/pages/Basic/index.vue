@@ -91,15 +91,13 @@
     </q-card>
           </q-tab-panel>
           <q-tab-panel style="padding: 7px !important;" name="ep">
-    <q-card style="margin-top: 10px;" class="my-card">
-    <q-btn v-for="eps in ep" v-bind:key="eps.id" color="white" style="width: 100%; padding: 5px; margin: 3px" push>
+    <q-btn v-for="eps in ep" v-bind:key="eps.id" color="white" style="width: 100%; padding: 2px; margin: 4px" push>
       <div class="row items-center no-wrap">
         <div style="color: black;" class="text-center">
           {{ eps.name }}
         </div>
       </div>
     </q-btn>
-    </q-card>
           </q-tab-panel>
           <q-tab-panel name="commant">
             <div class="text-h6">Movies</div>
