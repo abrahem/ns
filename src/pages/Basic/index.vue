@@ -101,13 +101,13 @@
           </q-tab-panel>
           <q-tab-panel style="padding: 11px !important;" name="commant">
     <q-card v-for="cm in commants" v-bind:key="cm.name" style="background-color: #673ab7; margin-bottom: 7px;" class="my-card text-white">
-      <q-card-actions align="left">
+      <q-card-actions style="padding: 4px; " align="left">
         <div style="background-color: #F44336; padding-left: 4px; padding-right: 4px; border-radius: 4px;" class="text-subtitle2">{{ cm.name }}</div>
       </q-card-actions>
       <q-card-section style="padding-left: 16px; padding-right: 16px; padding-bottom: 1px; padding-top: 1px;">
-        <div class="text-h6">{{ cm.commants }}</div>
+        <div class="text-h6" style="font-size: 19px; text-align-last: right;">{{ cm.commants }}</div>
       </q-card-section>
-      <q-card-actions align="right">
+      <q-card-actions style="padding-top: 0px;" align="right">
         <div class="text-subtitle2">{{ cm.time }}</div>
       </q-card-actions>
     </q-card>
