@@ -92,10 +92,8 @@
           </q-tab-panel>
           <q-tab-panel name="ep">
     <q-card style="margin-top: 10px;" class="my-card">
-      <q-card-section style="padding: 0px;" vertical>
-    <q-scroll-area style="height: 100%; width: 100%;">
-        <q-btn v-for="eps in ep" v-bind:key="eps.id" unelevated rounded color="white" :label="eps.name" />
-    </q-scroll-area>
+      <q-card-section style="padding: 3px; margin: 2px" vertical>
+        <q-btn v-for="eps in ep" v-bind:key="eps.id" unelevated rounded color="black" :label="eps.name" />
       </q-card-section>
     </q-card>
           </q-tab-panel>
