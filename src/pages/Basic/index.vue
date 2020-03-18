@@ -100,15 +100,15 @@
     </q-btn>
           </q-tab-panel>
           <q-tab-panel style="padding: 11px !important;" name="commant">
-    <q-card v-for="eps in ep" v-bind:key="eps.id" class="my-card bg-purple text-white">
+    <q-card v-for="cm in commants" v-bind:key="cm.name" style="background-color: #673ab7; margin-bottom: 7px;" class="my-card text-white">
       <q-card-actions align="left">
-        <div class="text-subtitle2">{{ eps.name }}</div>
+        <div style="background-color: #F44336; padding-left: 4px; padding-right: 4px; border-radius: 4px;" class="text-subtitle2">{{ cm.name }}</div>
       </q-card-actions>
-      <q-card-section>
-        <div class="text-h6">{{ eps.name }}</div>
+      <q-card-section style="padding-left: 16px; padding-right: 16px; padding-bottom: 1px; padding-top: 1px;">
+        <div class="text-h6">{{ cm.commants }}</div>
       </q-card-section>
       <q-card-actions align="right">
-        <div class="text-subtitle2">قبل 3 ساعات</div>
+        <div class="text-subtitle2">{{ cm.time }}</div>
       </q-card-actions>
     </q-card>
           </q-tab-panel>
