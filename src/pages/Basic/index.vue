@@ -90,7 +90,7 @@
       </q-card-section>
     </q-card>
           </q-tab-panel>
-          <q-tab-panel style="padding: 7px !important;" name="ep">
+          <q-tab-panel style="padding: 11px !important;" name="ep">
     <q-btn v-for="eps in ep" v-bind:key="eps.id" color="white" style="width: 100%; padding: 2px; margin: 4px" push>
       <div class="row items-center no-wrap">
         <div style="color: black;" class="text-center">
@@ -99,9 +99,18 @@
       </div>
     </q-btn>
           </q-tab-panel>
-          <q-tab-panel name="commant">
-            <div class="text-h6">Movies</div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <q-tab-panel style="padding: 11px !important;" name="commant">
+    <q-card v-for="eps in ep" v-bind:key="eps.id" class="my-card bg-purple text-white">
+      <q-card-actions align="left">
+        <div class="text-subtitle2">{{ eps.name }}</div>
+      </q-card-actions>
+      <q-card-section>
+        <div class="text-h6">{{ eps.name }}</div>
+      </q-card-section>
+      <q-card-actions align="right">
+        <div class="text-subtitle2">قبل 3 ساعات</div>
+      </q-card-actions>
+    </q-card>
           </q-tab-panel>
         </q-tab-panels>
     </q-page-container>
